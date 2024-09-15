@@ -28,14 +28,15 @@
     }
     .buttons-container {
       display: flex;
-      flex-wrap: wrap; /* Permite que os botões se movam para a próxima linha se necessário */
-      justify-content: center; /* Centraliza os botões horizontalmente */
-      margin-top: -1000px;
+      flex-direction: column; /* Exibe os botões em coluna em dispositivos móveis */
+      align-items: center; /* Centraliza os botões horizontalmente */
+      gap: 10px; /* Espaçamento entre os botões */
+      margin-top: 20px; /* Espaçamento superior */
     }
     .buttons-container button {
-      margin: 200px; /* Espaçamento entre os botões */
+      width: 100%; /* Botões ocupam toda a largura disponível */
       padding: 10px;
-      font-size: 24px;
+      font-size: 18px; /* Tamanho da fonte reduzido para dispositivos móveis */
       cursor: pointer;
       background-color: #007bff;
       color: white;
@@ -46,19 +47,26 @@
       justify-content: center;
     }
     .buttons-container button img {
-      width: 50px; /* Tamanho da imagem dos botões */
+      width: 30px; /* Tamanho da imagem dos botões */
       height: auto; /* Mantém a proporção */
     }
     .buttons-container button:hover {
       background-color: #0056b3;
     }
-    @media (max-width: 600px) {
+    /* Estilos para dispositivos maiores */
+    @media (min-width: 600px) {
+      .buttons-container {
+        flex-direction: row; /* Exibe os botões em linha em dispositivos maiores */
+        flex-wrap: wrap; /* Permite que os botões se movam para a próxima linha se necessário */
+        justify-content: center; /* Centraliza os botões horizontalmente */
+      }
       .buttons-container button {
-        font-size: 18px; /* Tamanho da fonte reduzido para dispositivos móveis */
-        padding: 8px;
+        width: auto; /* Largura automática dos botões */
+        font-size: 24px; /* Tamanho da fonte aumentado para dispositivos maiores */
+        padding: 10px;
       }
       .buttons-container button img {
-        width: 50px; /* Tamanho da imagem reduzido */
+        width: 50px; /* Tamanho da imagem dos botões */
       }
     }
   </style>
