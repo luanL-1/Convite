@@ -1,64 +1,72 @@
 body {
-  font-family: Arial, sans-serif; /* Altere a fonte conforme necessário */
-  color: #333; /* Cor do texto */
-  text-align: center; /* Centraliza o conteúdo */
-  margin: 0; /* Remove margens padrão do corpo */
-  padding: 0; /* Remove preenchimento padrão do corpo */
-}
-
-.container {
-  position: relative; /* Define o posicionamento relativo para poder posicionar elementos filhos de forma absoluta */
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente para melhor legibilidade */
-  border-radius: 8px; /* Borda arredondada */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.container img {
-  width: 100%; /* Garante que a imagem ocupe toda a largura da div */
-  border-radius: 8px; /* Borda arredondada para a imagem */
-  display: block; /* Para ajustar corretamente o posicionamento dos botões */
-}
-
-.buttons-container {
-  position: absolute; /* Posicionamento absoluto dentro do container */
-  bottom: 200px; /* Posiciona os botões 200px do rodapé */
-  left: 0; /* Alinha os botões à esquerda */
-  right: 0; /* Alinha os botões à direita */
-  text-align: center; /* Centraliza horizontalmente os botões */
-}
-
-.buttons-container button {
-  margin: 10px; /* Espaçamento entre os botões */
-  padding: 10px 15px;
-  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
-  cursor: pointer;
-  background-color: #007bff; /* Cor de fundo do botão */
-  color: white; /* Cor do texto do botão */
-  border: none;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttons-container button img {
-  width: 24px; /* Ajusta o tamanho das imagens dos botões */
-  height: auto; /* Mantém a proporção das imagens */
-}
-
-.buttons-container button:hover {
-  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
-}
-
-@media (max-width: 600px) {
+    font-family: Arial, sans-serif; /* Altere a fonte conforme necessário */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 0; /* Remove preenchimento padrão do corpo */
+  }
+  
+  .container {
+    position: relative; /* Define o posicionamento relativo para poder posicionar elementos filhos de forma absoluta */
+    max-width: 100%; /* Garante que o container não exceda a largura da tela */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente para melhor legibilidade */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .container img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura da div */
+    border-radius: 8px; /* Borda arredondada para a imagem */
+    display: block; /* Para ajustar corretamente o posicionamento dos botões */
+  }
+  
+  .buttons-container {
+    position: absolute; /* Posicionamento absoluto dentro do container */
+    bottom: 20px; /* Ajusta a posição dos botões a partir do rodapé */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Corrige o alinhamento */
+    display: flex;
+    flex-direction: row; /* Exibe os botões na horizontal */
+    justify-content: center; /* Alinha os botões ao centro horizontalmente */
+  }
+  
   .buttons-container button {
-    font-size: 20px; /* Tamanho da fonte ainda menor para telas muito pequenas */
-    padding: 8px 10px; /* Ajusta o padding */
+    margin: 0 10px; /* Espaçamento horizontal entre os botões */
+    padding: 10px 15px;
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    cursor: pointer;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
   .buttons-container button img {
-    width: 20px; /* Ajusta o tamanho das imagens dos botões */
+    width: 24px; /* Ajusta o tamanho das imagens dos botões */
+    height: auto; /* Mantém a proporção das imagens */
   }
-}
+  
+  .buttons-container button:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+  }
+  
+  @media (max-width: 600px) {
+    .buttons-container {
+      flex-direction: column; /* Empilha os botões verticalmente em telas menores */
+    }
+    
+    .buttons-container button {
+      font-size: 18px; /* Tamanho da fonte menor para telas muito pequenas */
+      padding: 8px 12px; /* Ajusta o padding para telas menores */
+    }
+    
+    .buttons-container button img {
+      width: 20px; /* Ajusta o tamanho das imagens dos botões */
+    }
+  }
+  
