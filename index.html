@@ -1,48 +1,80 @@
-/* Estilos gerais */
-.buttons-container {
-  display: flex;
-  flex-direction: column; /* Exibe os botões em coluna por padrão */
-  align-items: center; /* Centraliza os botões horizontalmente */
-  gap: 10px; /* Espaçamento entre os botões */
-  margin-top: 20px; /* Espaçamento superior */
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página com Imagem e Convite</title>
+  <style>
+    * {
+      border: 1px solid #cf0303;
+    }
 
-.buttons-container button {
-  width: 100%; /* Botões ocupam toda a largura disponível em dispositivos móveis */
-  padding: 10px;
-  font-size: 18px; /* Tamanho da fonte reduzido para dispositivos móveis */
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttons-container button img {
-  width: 50px; /* Tamanho da imagem dos botões */
-  height: auto; /* Mantém a proporção */
-}
-
-.buttons-container button:hover {
-  background-color: #0056b3;
-}
-
-/* Estilos para dispositivos maiores */
-@media (min-width: 600px) {
-  .buttons-container {
-    flex-direction: row; /* Exibe os botões em linha em dispositivos maiores */
-    flex-wrap: wrap; /* Permite que os botões se movam para a próxima linha se necessário */
-    justify-content: center; /* Centraliza os botões horizontalmente */
-  }
-  .buttons-container button {
-    width: auto; /* Largura automática dos botões em dispositivos maiores */
-    font-size: 24px; /* Tamanho da fonte aumentado para dispositivos maiores */
-    padding: 10px;
-  }
-  .buttons-container button img {
-    width: 50px; /* Tamanho da imagem dos botões */
-  }
-}
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .container img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+    .buttons-container {
+      display: flex;
+      flex-direction: row; /* Exibe os botões em linha em todos os dispositivos */
+      align-items: center; /* Centraliza os botões verticalmente */
+      gap: 10px; /* Espaçamento entre os botões */
+      margin-top: 20px; /* Espaçamento superior */
+      justify-content: center; /* Centraliza os botões horizontalmente */
+      flex-wrap: wrap; /* Permite que os botões se movam para a próxima linha se necessário */
+    }
+    .buttons-container button {
+      width: auto; /* Largura automática dos botões */
+      padding: 10px;
+      font-size: 18px; /* Tamanho da fonte para dispositivos menores */
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .buttons-container button img {
+      width: 50px; /* Tamanho da imagem dos botões */
+      height: auto; /* Mantém a proporção */
+    }
+    .buttons-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Convite.png" alt="Imagem de Convite">
+    <div class="buttons-container">    
+      <button onclick="window.location.href='https://www.google.com/maps'">
+        <img src="local.png" alt="Imagem de localização">
+      </button>
+      <button onclick="window.location.href='https://api.whatsapp.com/send?phone=554588219621&text=Confirmo%20minha%20presen%C3%A7a%20e%20estou%20ansioso(a)%20para%20celebrar%20a%20chegada%20do%20pequeno%20Miguel%20com%20voc%C3%A9s.'">
+        <img src="confirmar.png" alt="Imagem de confirmar presença">
+      </button>
+      <button onclick="window.open('sugestaoPG.png', '_blank')">
+        <img src="sugestao.png" alt="Imagem de sugestão">
+      </button>
+    </div>
+  </div>
+</body>
+</html>
