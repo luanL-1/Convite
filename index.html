@@ -13,8 +13,8 @@
       padding: 0;
     }
     .container {
-      position: relative; /* Usa posição relativa para o posicionamento interno */
-      max-width: 100%; /* Ajusta a largura para a tela do dispositivo */
+      position: relative;
+      max-width: 100%;
       margin: 0 auto;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.8);
@@ -22,20 +22,20 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .container img {
-      width: 100%; /* Garante que a imagem ocupe toda a largura do container */
+      width: 100%;
       border-radius: 8px;
       display: block;
     }
     .buttons-container {
-      display: flex; /* Usa flexbox para alinhar os botões */
-      flex-direction: column; /* Alinha os botões verticalmente */
-      align-items: center; /* Centraliza os botões horizontalmente */
-      margin-top: 20px; /* Espaçamento acima dos botões */
+      display: flex;
+      flex-wrap: wrap; /* Permite que os botões se movam para a próxima linha se necessário */
+      justify-content: center; /* Centraliza os botões horizontalmente */
+      margin-top: 20px;
     }
     .buttons-container button {
       margin: 10px; /* Espaçamento entre os botões */
       padding: 10px;
-      font-size: 24px; /* Ajusta o tamanho da fonte para dispositivos móveis */
+      font-size: 24px;
       cursor: pointer;
       background-color: #007bff;
       color: white;
@@ -46,19 +46,19 @@
       justify-content: center;
     }
     .buttons-container button img {
-      width: 24px; /* Ajusta o tamanho da imagem do botão */
-      height: auto; /* Mantém a proporção da imagem */
+      width: 24px; /* Tamanho da imagem dos botões */
+      height: auto; /* Mantém a proporção */
     }
     .buttons-container button:hover {
       background-color: #0056b3;
     }
     @media (max-width: 600px) {
       .buttons-container button {
-        font-size: 18px; /* Reduz o tamanho da fonte em telas pequenas */
-        padding: 8px; /* Reduz o preenchimento dos botões */
+        font-size: 18px; /* Tamanho da fonte reduzido para dispositivos móveis */
+        padding: 8px;
       }
       .buttons-container button img {
-        width: 20px; /* Ajusta o tamanho da imagem do botão para telas menores */
+        width: 20px; /* Tamanho da imagem reduzido */
       }
     }
   </style>
