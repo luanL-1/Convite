@@ -6,75 +6,45 @@
   <title>Página com Imagem e Convite</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      color: #333;
-      text-align: center;
-      margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif; /* Altere a fonte conforme necessário */
+      color: #333; /* Cor do texto */
+      text-align: center; /* Centraliza o conteúdo */
+      margin: 0; /* Remove margens padrão do corpo */
+      padding: 0; /* Remove preenchimento padrão do corpo */
     }
-
     .container {
-      position: relative;
-      max-width: 100%;
+      position: absolute; /* Define o posicionamento relativo para poder posicionar elementos filhos de forma absoluta */
+      max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.8); /* Fundo semitransparente para melhor legibilidade */
+      border-radius: 8px; /* Borda arredondada */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
     }
-
     .container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
+      width: 100%; /* Garante que a imagem ocupe toda a largura da div */
+      border-radius: 8px; /* Borda arredondada para a imagem */
+      display: block; /* Para ajustar corretamente o posicionamento dos botões */
     }
-
     .buttons-container {
-      position: static; /* Remove a posição absoluta */
-      display: flex;
-      flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte se necessário */
-      justify-content: center;
-      gap: 10px; /* Reduzido o espaço entre os botões */
-      margin-top: 20px; /* Adiciona um espaço acima dos botões */
-      margin-bottom: 20px; /* Adiciona um espaço abaixo dos botões */
+      position: absolute; /* Posicionamento absoluto dentro do container */
+      bottom: 200px; /* Posiciona os botões 20px do rodapé */
+      left: 0; /* Alinha os botões à esquerda */
+      right: 0; /* Alinha os botões à direita */
+      text-align: center; /* Centraliza horizontalmente os botões */
     }
-
     .buttons-container button {
-      padding: 10px 15px;
-      font-size: 24px;
+      margin: 90px; /* Espaçamento entre os botões */
+      padding: 5px 5px;
+      font-size: 32px;
       cursor: pointer;
-      background-color: #007bff;
-      color: white;
+      background-color: #007bff; /* Cor de fundo do botão */
+      color: white; /* Cor do texto do botão */
       border: none;
       border-radius: 4px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
-
-    .buttons-container button img {
-      width: 24px;
-      height: auto;
-    }
-
     .buttons-container button:hover {
-      background-color: #0056b3;
-    }
-
-    @media (max-width: 600px) {
-      .buttons-container {
-        flex-direction: column; /* Empilha os botões verticalmente em telas menores */
-        gap: 10px; /* Reduz o espaço entre os botões */
-      }
-
-      .buttons-container button {
-        font-size: 16px; /* Menor tamanho da fonte para telas pequenas */
-        padding: 8px;
-      }
-
-      .buttons-container button img {
-        width: 20px; /* Ajusta o tamanho da imagem dos botões */
-      }
+      background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
     }
   </style>
 </head>
